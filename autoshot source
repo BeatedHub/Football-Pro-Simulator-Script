@@ -1,0 +1,11 @@
+_G.autothrow = false
+local function throw()
+	game:GetService("ReplicatedStorage").comm.re:FireServer("throwBall",3345061592.6401024, 3345061591.122468)
+end
+
+local function autothrow()
+	while _G.autothrow do task.wait()
+		throw()
+	end
+end
+autothrow()
